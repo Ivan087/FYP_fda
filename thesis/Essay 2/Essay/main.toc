@@ -1,0 +1,29 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\contentsline {chapter}{Abstract}{i}{section*.1}%
+\contentsline {chapter}{List of Figures}{ii}{chapter*.2}%
+\contentsline {chapter}{List of Tables}{iii}{chapter*.3}%
+\contentsline {chapter}{List of Abbreviations}{iv}{chapter*.4}%
+\contentsline {chapter}{Contents}{v}{chapter*.6}%
+\contentsline {section}{\numberline {1}Introduction}{1}{section.7}%
+\contentsline {section}{\numberline {2}Materials and methods}{2}{section.8}%
+\contentsline {subsection}{\numberline {2.1}Methodologies}{2}{subsection.9}%
+\contentsline {subsection}{\numberline {2.2}Data Smoothing}{3}{subsection.11}%
+\contentsline {subsection}{\numberline {2.3}Preprocessing for Functional Data}{5}{subsection.14}%
+\contentsline {subsection}{\numberline {2.4}Functional Principal Components Analysis}{5}{subsection.15}%
+\contentsline {subsection}{\numberline {2.5}Principal Component Score Function}{6}{subsection.16}%
+\contentsline {subsection}{\numberline {2.6}Functional Linear Model with Scalar Response}{7}{subsection.17}%
+\contentsline {subsection}{\numberline {2.7}Functional Score Regression}{9}{subsection.18}%
+\contentsline {subsection}{\numberline {2.8}Functional Linear Model with Functional Response}{9}{subsection.19}%
+\contentsline {subsection}{\numberline {2.9}Functional Neural Networks with Scalar Response}{9}{subsection.20}%
+\contentsline {subsection}{\numberline {2.10}FuncNN with Functional Response}{13}{subsection.26}%
+\contentsline {section}{\numberline {3}Results and Comparison}{13}{section.27}%
+\contentsline {subsection}{\numberline {3.1}Data}{14}{subsection.28}%
+\contentsline {subsection}{\numberline {3.2}Data Smoothing}{14}{subsection.29}%
+\contentsline {subsection}{\numberline {3.3}Functional Linear Model with the Original Five Covariates to Scalar Response}{18}{subsection.50}%
+\contentsline {subsection}{\numberline {3.4}Functional Score Regression with Three Principal Components to Scalar Response}{20}{subsection.51}%
+\contentsline {subsection}{\numberline {3.5}Functional Neural Networks to Scalar Response}{20}{subsection.53}%
+\contentsline {subsection}{\numberline {3.6}Autoregression Model}{22}{subsection.57}%
+\contentsline {subsection}{\numberline {3.7}Results}{22}{subsection.58}%
+\contentsline {section}{\numberline {4}Discussion}{23}{section.61}%
+\contentsline {section}{\numberline {5}Bibliography}{24}{section.62}%

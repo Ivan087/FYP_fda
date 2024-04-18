@@ -1,0 +1,22 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Flow chart for the whole procedure\relax }}{2}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Traditional neural network structure\relax }}{10}{figure.caption.21}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Functional neural network with shared weight\relax }}{11}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Functional neural network with functional neurons\relax }}{11}{figure.caption.23}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Functional neural network with functional weight\relax }}{12}{figure.caption.24}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Details implemented in FuncNN\relax }}{12}{figure.caption.25}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces The value of AIC + BIC corresponding to each $\qopname \relax o{log}_{10}(\lambda )$ for Temperature\relax }}{14}{figure.caption.30}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces The value of AIC + BIC corresponding to each $\qopname \relax o{log}_{10}(\lambda )$ for Pressure\relax }}{15}{figure.caption.33}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces The value of AIC + BIC corresponding to each $\qopname \relax o{log}_{10}(\lambda )$ for Humidity\relax }}{15}{figure.caption.36}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces The value of AIC + BIC corresponding to each $\qopname \relax o{log}_{10}(\lambda )$ for Wind\relax }}{15}{figure.caption.39}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces The value of AIC + BIC corresponding to each $\qopname \relax o{log}_{10}(\lambda )$ for Sun\relax }}{16}{figure.caption.42}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces The GCV value corresponding to each $\qopname \relax o{log}_{10}(\lambda )$ for Temperature\relax }}{16}{figure.caption.45}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces The GCV value corresponding to each $\qopname \relax o{log}_{10}(\lambda )$ for Pressure\relax }}{17}{figure.caption.46}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces The GCV value corresponding to each $\qopname \relax o{log}_{10}(\lambda )$ for Humidity\relax }}{17}{figure.caption.47}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces The GCV value corresponding to each $\qopname \relax o{log}_{10}(\lambda )$ for Wind\relax }}{17}{figure.caption.48}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces The GCV value corresponding to each $\qopname \relax o{log}_{10}(\lambda )$ for Sun\relax }}{18}{figure.caption.49}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Variance explained by the first 4 PCs for all 24 years\relax }}{20}{figure.caption.52}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces The principle of how dropout works\relax }}{21}{figure.caption.54}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces The principle of how early stop works\relax }}{21}{figure.caption.55}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces An example of early stop\relax }}{22}{figure.caption.56}%

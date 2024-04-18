@@ -1,0 +1,38 @@
+Now let me go ahead to talk about theories in functional neural network. 
+I will first introduce traditional artificial neural network before functional neural network. 
+For ANN, we can directly input all the discrete data points into the input layer. This method is easy to understand and implement. But there will be many parameters.  And it lacks interpretation for weight function. This method do not treat functional data as a whole, but only treat them neuron by neuron. The weigth obtained may not even be a continuous function.
+
+Then we introduce functional data into neural network according to Thind in their article. They make some transfromation of functional data in the first layer and the following layers are the same as tradition one. We can see in the picture, the red box represent functional data, and their correspoding weights are treated as functional, colored in orange. 
+Neurons in the first hidden layer can be formulated as this one: 
+the second and third terms are the same. Only differ in the first term, replace scalar product by the integral of a functional covariate and its corresponding weigh function. But how can we deal with this integral especially when the weight function is unknown and it is infinitely dimensional. 
+
+The first thing is that we still have to assume the functional weight can be expressed by a finite basis function expansion like this one. Then we can integrate functional covariate and its basis functions, put these scalar outcomes into input layer. Then, we obtain a traditional neural network and then we can estimate these coefficients, recover functional weight by this formular.  
+
+After we finish the reviews on theories we are going to apply those models into real senario. We collect our data from  Macau Meteorological and Geophysical Bureau. We are going to make prepicitation prediction.  We take five functional covariates, they are daily average temp, humiduty, pressure,sunshine and windspeed. And we take average yearly precipitation as scalar response.  
+Those data are collected form 24 years, which means we have 24 observations for each covariate. 
+
+To smooth the data, we choose Fourier Series as bases since they are useful for periodical data. And the number of basis is determined by criteria AIC + BIC. Here is the example of covariate temperature. 
+
+After we smooth the data, we plug in functional data obtained into 4 models
+discussed before, implement the models with more details
+The first two models are FLM with or without penalty. If the FLM is without penalty, we can only take 3 basis functions for each covariate since we have only 24 observations.
+And the result is terrible. So it is nessesary to add a penalty term. Here we take ridge as our penalty. 
+
+The third model is functional score regression. 
+This picture have shown the total variance explained by different PCs. We could see that the first three PCs have already explained most of the variance about 95%, much more than the first two,  while a little less than the frist four.
+Hence, we choose the first three functional scores as our functional covariates.
+
+After that, we take some techniques to measure the models. We will split the training and test set, use MSPE, which is exactly MSE in 5 cross-validation estimation, and also R^2 in test set. 
+
+
+Here come the results of differents models.
+The first table is concerning the outcomes of models we dicussed above.
+The second table is about the outcomes of those models adding one more covariate. This new covariate is the previous one year's scalar response, that is precipitation data. These models are similar to the autoregression model in the time series. 
+First we can see, FLM with penalty perfoms better than the one without penalty. 
+Then compare FLM with penalty and FSR, we see FSR performs better and we suggest that this model we proposed can alleviate the problem of collinearity.
+Next, look at FNN, it outperforms than any other linear models above. 
+Finally, compare this two tables. All the models below are poorer than those above, we can infer that there may not  be a strong relationship between previous year's and current year's precipitation data.
+
+From the table of results, we can conclude that FUNcnn performs well and the reason may be that the relationship between response and covariates is not linear and neural network have an advantage in dealing with nonlinear relationship. 
+During our experiment, we have found some  futher works to focus on. 
+

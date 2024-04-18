@@ -1,0 +1,355 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Masters/Doctoral Thesis 
+% LaTeX Template
+% Version 2.5 (27/8/17)
+%
+% This template was downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Version 2.x major modifications by:
+% Vel (vel@latextemplates.com)
+%
+% This template is based on a template by:
+% Steve Gunn (http://users.ecs.soton.ac.uk/srg/softwaretools/document/templates/)
+% Sunil Patel (http://www.sunilpatel.co.uk/thesis-template/)
+%
+% Template license:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+11pt, % The default document font size, options: 10pt, 11pt, 12pt
+oneside, % Two side (alternating margins) for binding by default, uncomment to switch to one side
+english, % ngerman for German
+singlespacing, % Single line spacing, alternatives: onehalfspacing or doublespacing
+%draft, % Uncomment to enable draft mode (no pictures, no links, overfull hboxes indicated)
+%nolistspacing, % If the document is onehalfspacing or doublespacing, uncomment this to set spacing in lists to single
+liststotoc, % Uncomment to add the list of figures/tables/etc to the table of contents
+toctotoc, % Uncomment to add the main table of contents to the table of contents
+%parskip, % Uncomment to add space between paragraphs
+%nohyperref, % Uncomment to not load the hyperref package
+headsepline, % Uncomment to get a line under the header
+%chapterinoneline, % Uncomment to place the chapter title next to the number on one line
+%consistentlayout, % Uncomment to change the layout of the declaration, abstract and acknowledgements pages to match the default layout
+]{MastersDoctoralThesis} % The class file specifying the document structure
+
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage{booktabs}
+\usepackage{mathpazo} % Use the Palatino font by default
+\usepackage{enumerate}
+
+
+\usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
+
+\addbibresource{example.bib} % The filename of the bibliography
+
+\usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
+
+\makeatletter
+\renewenvironment{thebibliography}[1]
+     {\section*{\bibname}% <-- this line was changed from \chapter* to \section*
+      \@mkboth{\MakeUppercase\bibname}{\MakeUppercase\bibname}%
+      \list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+            \leftmargin\labelwidth
+            \advance\leftmargin\labelsep
+            \@openbib@code
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+\makeatother
+%----------------------------------------------------------------------------------------
+%	MARGIN SETTINGS
+%----------------------------------------------------------------------------------------
+
+\geometry{
+	paper=a4paper, % Change to letterpaper for US letter
+	inner=2.5cm, % Inner margin
+	outer=3.8cm, % Outer margin
+	bindingoffset=.5cm, % Binding offset
+	top=1.5cm, % Top margin
+	bottom=1.5cm, % Bottom margin
+	%showframe, % Uncomment to show how the type block is set on the page
+}
+
+%----------------------------------------------------------------------------------------
+%	THESIS INFORMATION
+%----------------------------------------------------------------------------------------
+
+\thesistitle{Functional Deep Learning With Application to Forecasting Precipitation in Macau} % Your thesis title, this is used in the title and abstract, print it elsewhere with \ttitle
+\supervisor{Prof. Zhi Liu} % Your supervisor's name, this is used in the title page, print it elsewhere with \supname
+\examiner{} % Your examiner's name, this is not currently used anywhere in the template, print it elsewhere with \examname
+\degree{Bechelor of Mathematics} % Your degree name, this is used in the title page and abstract, print it elsewhere with \degreename
+\author{Kuichen Shao \\ Jiatai Wu} % Your name, this is used in the title page and abstract, print it elsewhere with \authorname
+\addresses{} % Your address, this is not currently used anywhere in the template, print it elsewhere with \addressname
+
+\subject{Biological Sciences} % Your subject area, this is not currently used anywhere in the template, print it elsewhere with \subjectname
+\keywords{functional data analysis, functional neural network, precipitation forcasting in Macau} % Keywords for your thesis, this is not currently used anywhere in the template, print it elsewhere with \keywordnames
+\university{\href{https://www.um.edu.mo/}{University of Macau}} % Your university's name and URL, this is used in the title page and abstract, print it elsewhere with \univname
+\department{\href{https://www.fst.um.edu.mo/math/}{Department of Mathematics}} % Your department's name and URL, this is used in the title page and abstract, print it elsewhere with \deptname
+\group{\href{http://researchgroup.university.com}{Research Group Name}} % Your research group's name and URL, this is used in the title page, print it elsewhere with \groupname
+\faculty{\href{https://www.fst.um.edu.mo/}{Faculty of Science and Technology}} % Your faculty's name and URL, this is used in the title page and abstract, print it elsewhere with \facname
+
+\AtBeginDocument{
+\hypersetup{pdftitle=\ttitle} % Set the PDF's title to your title
+\hypersetup{pdfauthor=\authorname} % Set the PDF's author to your name
+\hypersetup{pdfkeywords=\keywordnames} % Set the PDF's keywords to your keywords
+}
+
+\begin{document}
+
+\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
+
+\pagestyle{plain} % Default to the plain heading style until the thesis style is called for the body content
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{titlepage}
+\begin{center}
+
+\vspace*{.06\textheight}
+{\scshape\LARGE \univname\par}\vspace{1.5cm} % University name
+\textsc{\Large Final Year project}\\[0.5cm] % Thesis type
+
+\HRule \\[0.4cm] % Horizontal line
+{\huge \bfseries \ttitle\par}\vspace{0.4cm} % Thesis title
+\HRule \\[1.5cm] % Horizontal line
+ 
+\begin{minipage}[t]{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Author:}\\
+\authorname % Author name - remove the \href bracket to remove the link
+\end{flushleft}
+\end{minipage}
+\begin{minipage}[t]{0.4\textwidth}
+\begin{flushright} \large
+\emph{Supervisor:} \\
+\href{https://www.fst.um.edu.mo/people/liuzhi/}{\supname} % Supervisor name - remove the \href bracket to remove the link  
+\end{flushright}
+\end{minipage}\\[3cm]
+ 
+\vfill
+
+\large \textit{A thesis submitted in fulfillment of the requirements\\ for the degree of \degreename}\\[0.3cm] % University requirement text
+\textit{in the}\\[0.4cm]
+%\groupname\\
+\deptname\\\facname\\\univname \\[2cm] % Research group name and department name
+
+\vfill
+
+{\large \today}\\[4cm] % Date
+%\includegraphics{Logo} % University/department logo - uncomment to place it
+ 
+\vfill
+\end{center}
+\end{titlepage}
+
+%----------------------------------------------------------------------------------------
+%	DECLARATION PAGE
+%----------------------------------------------------------------------------------------
+%
+%\begin{declaration}
+%\addchaptertocentry{\authorshipname} % Add the declaration to the table of contents
+%\noindent I, \authorname, declare that this thesis titled, \enquote{\ttitle} and the work presented in it are my own. I confirm that:
+%
+%\begin{itemize} 
+%\item This work was done wholly or mainly while in candidature for a research degree at this University.
+%\item Where any part of this thesis has previously been submitted for a degree or any other qualification at this University or any other institution, this has been clearly stated.
+%\item Where I have consulted the published work of others, this is always clearly attributed.
+%\item Where I have quoted from the work of others, the source is always given. With the exception of such quotations, this thesis is entirely my own work.
+%\item I have acknowledged all main sources of help.
+%\item Where the thesis is based on work done by myself jointly with others, I have made clear exactly what was done by others and what I have contributed myself.\\
+%\end{itemize}
+% 
+%\noindent Signed:\\
+%\rule[0.5em]{25em}{0.5pt} % This prints a line for the signature
+% 
+%\noindent Date:\\
+%\rule[0.5em]{25em}{0.5pt} % This prints a line to write the date
+%\end{declaration}
+%
+%\cleardoublepage
+
+%----------------------------------------------------------------------------------------
+%	QUOTATION PAGE
+%----------------------------------------------------------------------------------------
+
+%\vspace*{0.2\textheight}
+%
+%\noindent\enquote{\itshape Thanks to my solid academic training, today I can write hundreds of words on virtually any topic without possessing a shred of information, which is how I got a good job in journalism.}\bigbreak
+%
+%\hfill Dave Barry
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT PAGE
+%----------------------------------------------------------------------------------------
+\let\cleardoublepage\clearpage
+\begin{abstract}
+\addchaptertocentry{\abstractname} % Add the abstract to the table of contents
+Precipitation prediction is a popular topic in the field of weather forecasting, as it provides many benefits for various occupations. For example, farmers can use rainfall prediction to plan crop planting and irrigation, thus maximizing rainfall usage and improving yield and quality in agriculture. Additionally, precipitation prediction can aid in disaster prevention and reduction efforts by enabling authorities to take early action to reduce the harm of natural disasters such as floods and landslides.
+Several commonly used methods for precipitation prediction exist, including the time series method, Bayesian method, and artificial neural network method. Each of these methods has its advantages and disadvantages that need to be improved upon. For instance, the time series method processes precipitation data individually and does not incorporate other factors such as humidity or wind speed, potentially missing useful information. Additionally, this method is sensitive to data noise and outliers, requiring complex data preprocessing and filtering. On the other hand, the Bayesian method relies heavily on model assumptions and prior distribution choices, which can significantly impact predicted results. Furthermore, the predictive power of this method may be weak for cases with few data samples or insufficient prior knowledge. Lastly, the artificial neural network method requires a large number of parameters and lacks interpretability, making it challenging to explain the reasoning behind the results.
+In this article, we introduce the functional neural network (FuncNN) as a potential solution to these problems. The FuncNN method is capable of handling multi-covariates, eliminating the need to find a suitable prior distribution as with the Bayesian method. Furthermore, FuncNN requires fewer parameters than the artificial neural network method while also improving interpretability.\\
+\\
+Keywords: functional data analysis, functional deep learning, weather forecast
+\end{abstract}
+
+%----------------------------------------------------------------------------------------
+%	ACKNOWLEDGEMENTS
+%----------------------------------------------------------------------------------------
+
+%\begin{acknowledgements}
+%\addchaptertocentry{\acknowledgementname} % Add the acknowledgements to the table of contents
+%The acknowledgments and the people to thank go here, don't forget to include your project advisor\ldots
+%\end{acknowledgements}
+
+%----------------------------------------------------------------------------------------
+%	LIST OF CONTENTS/FIGURES/TABLES PAGES
+%----------------------------------------------------------------------------------------
+\let\oldclearpage\clearpage
+\let\clearpage\relax
+\renewcommand\thesection{\arabic {section}}
+ % Prints the main table of contents
+
+\listoffigures % Prints the list of figures
+
+\listoftables % Prints the list of tables
+\let\clearpage\oldclearpage
+%----------------------------------------------------------------------------------------
+%	ABBREVIATIONS
+%----------------------------------------------------------------------------------------
+
+\begin{abbreviations}{ll} % Include a list of abbreviations (a table of two columns)
+
+\textbf{FDA} & \textbf{F}unctional \textbf{D}ata \textbf{A}nalysis\\
+\textbf{FPCA} & \textbf{F}unctional \textbf{P}rincipal  \textbf{C}omponent  \textbf{A}nalysis\\
+\textbf{FLM} & \textbf{F}unctional \textbf{L}inear  \textbf{M}odel\\
+\textbf{FuncNN} & \textbf{F}unctional \textbf{N}eural  \textbf{N}etwork\\
+\textbf{FSR} & \textbf{F}unctional \textbf{S}core  \textbf{R}egression\\
+\textbf{FSM} & \textbf{F}unctional \textbf{S}core  \textbf{M}ethod\\
+\textbf{ANN} & \textbf{A}rtificial \textbf{N}eural  \textbf{N}etwork\\
+\textbf{AR} & \textbf{A}uto\textbf{R}egression\\
+
+\end{abbreviations}
+
+\tableofcontents
+%----------------------------------------------------------------------------------------
+%	PHYSICAL CONSTANTS/OTHER DEFINITIONS
+%----------------------------------------------------------------------------------------
+
+%\begin{constants}{lr@{${}={}$}l} % The list of physical constants is a three column table
+%
+%% The \SI{}{} command is provided by the siunitx package, see its documentation for instructions on how to use it
+%
+%Speed of Light & $c_{0}$ & \SI{2.99792458e8}{\meter\per\second} (exact)\\
+%%Constant Name & $Symbol$ & $Constant Value$ with units\\
+%
+%\end{constants}
+
+%----------------------------------------------------------------------------------------
+%	SYMBOLS
+%----------------------------------------------------------------------------------------
+
+%\begin{symbols}{lll} % Include a list of Symbols (a three column table)
+%
+%$a$ & distance & \si{\meter} \\
+%$P$ & power & \si{\watt} (\si{\joule\per\second}) \\
+%%Symbol & Name & Unit \\
+%
+%\addlinespace % Gap to separate the Roman symbols from the Greek
+%
+%$\omega$ & angular frequency & \si{\radian} \\
+%
+%\end{symbols}
+
+%----------------------------------------------------------------------------------------
+%	DEDICATION
+%----------------------------------------------------------------------------------------
+%
+%\dedicatory{For/Dedicated to/To my\ldots} 
+%
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - CHAPTERS
+%----------------------------------------------------------------------------------------
+
+\mainmatter % Begin numeric (1,2,3...) page numbering
+
+\pagestyle{thesis} % Return the page headers back to the "thesis" style
+
+% Include the chapters of the thesis as separate files from the Chapters folder
+% Uncomment the lines as you write the chapters
+
+%\input{Chapters/Chapter1}
+%\include{Chapters/fyp}
+\input{Chapters/fyp} 
+%\include{Chapters/Chapter3}
+%\include{Chapters/Chapter4} 
+%\include{Chapters/Chapter5} 
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - APPENDICES
+%----------------------------------------------------------------------------------------
+
+%\appendix % Cue to tell LaTeX that the following "chapters" are Appendices
+%
+%% Include the appendices of the thesis as separate files from the Appendices folder
+%% Uncomment the lines as you write the Appendices
+%
+%\include{Appendices/AppendixA}
+%\include{Appendices/AppendixB}
+%\include{Appendices/AppendixC}
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+\section{Bibliography}
+\begin{enumerate}
+\item Cuesta-Albertos, J. A., García-Portugués, E., Febrero-Bande, M., \& González-Manteiga, W. (2019). Goodness-of-fit tests for the functional linear model based on randomly projected empirical processes. The Annals of Statistics, 47(1), 439-467.
+\item Ferraty F, Vieu P (2006). Nonparametric Functional Data Analysis. Springer-Verlag, New York.  
+\item Heinrichs, F., Heim, M., \& Weber, C. (2023). Functional Neural Networks: Shift invariant models for functional data with applications to EEG classification. arXiv preprint arXiv:2301.05869.
+\item Henderson, B. (2006). Exploring between site differences in water quality trends: a functional data analysis approach. Environmetrics: The official journal of the International Environmetrics Society, 17(1), 65-80.
+\item Martínez, J., Saavedra, Á., García-Nieto, P. J., Piñeiro, J. I., Iglesias, C., Taboada, J., ...\& Pastor, J. (2014). Air quality parameters outliers detection using functional data analysis in the Langreo urban area (Northern Spain). Applied Mathematics and Computation, 241, 1-10.
+\item Perdices, D., de Vergara, J. E. L., \& Ramos, J. (2021). Deep-FDA: Using functional data analysis and neural networks to characterize network services time series. IEEE Transactions on Network and Service Management, 18(1), 986-999.
+\item Preda, C., Saporta, G., and Lévéder, C. (2007), “PLS Classification of Functional Data,” Computational Statistics, 22, 223–235.  
+\item Ramsay, J. O., Hooker, G., \& Graves, S. (2009). Functional data analysis with R and MATLAB (Vol. 43). Springer Science \& Business Media.
+\item Rumelhart, D., Hinton, G., and Williams, R. (1985), “Learning Internal Representations by Error Propagation,” Technical Report, California Univ San Diego La Jolla Inst for Cognitive Science.
+\item Srivastava, N., Hinton, G., Krizhevsky, A., Sutskever, I., \& Salakhutdinov, R. (2014). Dropout: a simple way to prevent neural networks from overfitting. The journal of machine learning research, 15(1), 1929-1958.
+\item Thind, B., Multani, K., \& Cao, J. (2022). Deep Learning With Functional Inputs. Journal of Computational and Graphical Statistics, 00(0), 1-10. 
+\item Wang, J.-L., Chiou, J.-M., \& Muller, H.-G. (2015). Functional data analysis. Annual Review of Statistics and Its Application, 2(1), 1–41. 
+\item Yao, J., Mueller, J., \& Wang, J. L. (2021, July). Deep learning for functional data analysis with adaptive basis layers. In International Conference on Machine Learning (pp. 11898-11908). PMLR.
+\item Yao, Y., Rosasco, L., \& Caponnetto, A. (2007). On early stopping in gradient descent learning. Constructive Approximation, 26(2), 289-315.
+\end{enumerate}
+
+\printbibliography[heading=bibintoc]
+%\addcontentsline{toc}{section}{Bibliography}
+%\begin{thebibliography}{99}  
+%\bibitem{ref1}Cuesta-Albertos, J. A., García-Portugués, E., Febrero-Bande, M., \& González-Manteiga, W. (2019). Goodness-of-fit tests for the functional linear model based on randomly projected empirical processes. The Annals of Statistics, 47(1), 439-467.
+%\bibitem{ref2}Ferraty F, Vieu P (2006). Nonparametric Functional Data Analysis. Springer-Verlag, New York.  
+%\bibitem{ref3}Henderson, B. (2006). Exploring between site differences in water quality trends: a functional data analysis approach. Environmetrics: The official journal of the International Environmetrics Society, 17(1), 65-80.
+%\bibitem{ref4}Preda, C., Saporta, G., and Lévéder, C. (2007), “PLS Classification of Functional Data,” Computational Statistics, 22, 223–235.  
+%\bibitem{ref5}Ramsay, J. O., Hooker, G., \& Graves, S. (2009). Functional data analysis with R and MATLAB (Vol. 43). Springer Science \& Business Media.
+%\bibitem{ref6}Rumelhart, D., Hinton, G., and Williams, R. (1985), “Learning Internal Representations by Error Propagation,” Technical Report, California Univ San Diego La Jolla Inst for Cognitive Science.
+%\bibitem{ref7}Srivastava, N., Hinton, G., Krizhevsky, A., Sutskever, I., \& Salakhutdinov, R. (2014). Dropout: a simple way to prevent neural networks from overfitting. The journal of machine learning research, 15(1), 1929-1958.
+%\bibitem{ref8}Thind, B., Multani, K., \& Cao, J. (2022). Deep Learning With Functional Inputs. Journal of Computational and Graphical Statistics, 00(0), 1-10. 
+%\bibitem{ref9}Wang, J.-L., Chiou, J.-M., \& Muller, H.-G. (2015). Functional data analysis. Annual Review of Statistics and Its Application, 2(1), 1–41. 
+%\bibitem{ref10}Yao, Y., Rosasco, L., \& Caponnetto, A. (2007). On early stopping in gradient descent learning. Constructive Approximation, 26(2), 289-315.
+%\end{thebibliography}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}  

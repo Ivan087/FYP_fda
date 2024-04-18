@@ -1,0 +1,15 @@
+\beamer@sectionintoc {1}{Basic Concepts of Functional Data Analysis}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{What is functional data}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{Smooth}{4}{0}{1}
+\beamer@subsectionintoc {1}{3}{Functional linear model}{6}{0}{1}
+\beamer@subsectionintoc {1}{4}{Functional Principal Component Analysis}{9}{0}{1}
+\beamer@subsectionintoc {1}{5}{Functional Score Regression}{10}{0}{1}
+\beamer@sectionintoc {2}{Functional Deep Learning}{11}{0}{2}
+\beamer@subsectionintoc {2}{1}{Functional Neural Network}{12}{0}{2}
+\beamer@sectionintoc {3}{Data}{14}{0}{3}
+\beamer@sectionintoc {4}{Result}{15}{0}{4}
+\beamer@subsectionintoc {4}{1}{Smooth}{15}{0}{4}
+\beamer@subsectionintoc {4}{2}{Model Building}{16}{0}{4}
+\beamer@subsectionintoc {4}{3}{Model measurement}{19}{0}{4}
+\beamer@sectionintoc {5}{Discussion}{21}{0}{5}
+\beamer@sectionintoc {6}{Reference}{22}{0}{6}
