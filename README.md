@@ -1,9 +1,9 @@
 ##  Functional Deep Learning With Application to Forecasting Precipitation in Macau
- Athesis submitted in fulfillment of the requirements
+ A thesis submitted in fulfillment of the requirements
  for the degree of Bechelor of Mathematics
  in the
- Department of Mathematics
- Faculty of Science and Technology
+ Department of Mathematics,
+ Faculty of Science and Technology,
  University of Macau
  
 Essay report refers to link[https://github.com/Ivan087/FYP_fda/blob/main/thesis/Functional%20Deep%20Learning%20With%20Application%20to%20Forecasting%20Precipitation%20in%20Macau.pdf]
